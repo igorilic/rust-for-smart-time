@@ -29,14 +29,8 @@ export default function LessonSlug({ post }) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description}></meta>
-        {/* <meta name="keywords" content={courseInfo.keywords.join(",")}></meta> */}
         <meta name="og:description" content={description}></meta>
         <meta name="og:title" content={title}></meta>
-        <meta
-          name="og:image"
-          content={`${process.env.BASE_URL}/images/social-share-cover.jpg`}
-        ></meta>
-        <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
       <div className="lesson-container">
         <div className="lesson">

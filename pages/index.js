@@ -16,11 +16,6 @@ export default function Lessons({ sections }) {
         <meta name="keywords" content={courseInfo.keywords.join(",")}></meta>
         <meta name="og:description" content={courseInfo.description}></meta>
         <meta name="og:title" content={courseInfo.title}></meta>
-        <meta
-          name="og:image"
-          content={`${process.env.BASE_URL}/images/social-share-cover.jpg`}
-        ></meta>
-        <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
       <div>
         <div className="jumbotron">
@@ -31,7 +26,7 @@ export default function Lessons({ sections }) {
               <div className="author">
                 <div className="image">
                   <img
-                    src={`${process.env.BASE_URL}/images/author.png`}
+                    src={`${process.env.BASE_URL}/images/author.jpg`}
                     alt="author image"
                     className="image"
                   />
@@ -45,7 +40,7 @@ export default function Lessons({ sections }) {
           </div>
           <div className="courseIcon">
             <img
-              src={`${process.env.BASE_URL}/images/course-icon.png`}
+              src={`${process.env.BASE_URL}/images/red.jpg`}
               alt="course icon"
             />
           </div>

@@ -40,7 +40,11 @@ words and ideas.
 const foo = 5; // sort of constant
 let foo = 5; // definitely not constant
 const foo = [] as const; // const pointer to a constant..
-// i understand if you don't c the joke
+```
+
+```cs
+const int foo = 5; // constant
+int foo = 5; // not constant
 ```
 
 ```rust
@@ -70,6 +74,25 @@ let mut foo = 5; // mutable
 ```typescript
 const foo = [...];
 const foo = someMethod(foo);
+```
+
+```cs
+public class BaseClass
+{
+    public void DoSomething()
+    {
+        Console.WriteLine("BaseClass.DoSomething");
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public new void DoSomething()
+    {
+        Console.WriteLine("DerivedClass.DoSomething");
+    }
+}
+
 ```
 
 ```rust
@@ -104,9 +127,16 @@ let foo = tokenize_and_do_things_to_string(foo); // Vec<String>
 <br />
 <br />
 
-## If
+## Conditions, a.k.a "if..then..else"
 
 ```typescript
+if (condition && second || this_one) {
+    ...
+} else if ...
+else
+```
+
+```cs
 if (condition && second || this_one) {
     ...
 } else if ...
@@ -147,6 +177,13 @@ for (let i = 0; i < 10; ++i) {
 }
 ```
 
+```cs
+for (int i = 0; i < 5; i++)
+{
+  // ...
+}
+```
+
 ```rust
 for i in 0..10 {
 }
@@ -162,6 +199,14 @@ for i in 0..=10 {
 while (true) {
   // ...
 }
+```
+
+```cs
+while (true)
+{
+    // ...
+}
+
 ```
 
 ```rust
@@ -201,6 +246,14 @@ for (const idx in [1, 2, 3]) {
 // array#forEach // iterates
 // array#reduce // always a bad decision
 // map#forEach // weird interface
+```
+
+```cs
+string[] vals = {"a", "b", "c"};
+foreach (string in vals)
+{
+    // ...
+}
 ```
 
 #### Rust
@@ -270,6 +323,10 @@ function foo() {
 }
 ```
 
+```cs
+Func<int> foo = () => 5;
+```
+
 ```rust
 fn foo() -> usize {
     return 5;
@@ -285,6 +342,11 @@ fn foo() -> usize {
 
 // or auto return x + 1 like
 (x) => x + 1;
+```
+
+```cs
+x => 5
+
 ```
 
 ```rust
@@ -332,6 +394,25 @@ class Foo {
 }
 ```
 
+```cs
+public class Foo
+{
+    private string message;
+
+    public Foo(string message)
+    {
+        this.message = message;
+    }
+
+    // Bar method which prints the message
+    public void Bar()
+    {
+        Console.WriteLine(message);
+    }
+}
+
+```
+
 Pay real close attention
 
 ```rust
@@ -358,8 +439,6 @@ impl Foo {
     pub fn this(self)...
 }
 ```
-
-- What stuck out to you?
 
 <br />
 <br />
@@ -391,7 +470,12 @@ interface Foo {
 }
 ```
 
-again, look for something special here
+```cs
+public interface IFoo
+{
+    void Bar();
+}
+```
 
 ```rust
 trait Foo {
@@ -403,10 +487,6 @@ impl Foo for MyStruct {
     ...
 }
 ```
-
-- traits compose
-  this may not sound big, but its AMAZING effectively prevents the need for
-  inheritance
 
 <br />
 <br />

@@ -4,6 +4,7 @@ description: "The part of javascript that is completely simplified"
 ---
 
 ### Are numbers that complex?
+
 In rust they are more complicated because rust needs to know the _size_.
 
 <br />
@@ -24,9 +25,10 @@ In rust they are more complicated because rust needs to know the _size_.
 <br />
 
 ### Numbers in typescript!
+
 ```typescript
 // We would call this an integer
-4 // this... is technically a smi, but for your purpose, its a number
+4; // this... is technically a smi, but for your purpose, its a number
 ```
 
 ```typescript
@@ -57,6 +59,7 @@ In rust they are more complicated because rust needs to know the _size_.
 <br />
 
 ### None of that was cool for rust
+
 Rust you have to specify the types `<NUMBER>` = power of two
 
 `i<NUMBER>` = an integer that can be negative or positive (signed)
@@ -111,26 +114,25 @@ straight forward.
 <br />
 
 ### The difference between String and &str
-Yes, you will see there are two types of strings you commonly run into.  So
+
+Yes, you will see there are two types of strings you commonly run into. So
 what are they?
 
 <br />
 
 #### **String**
-* Well `String` is a heap allocated (heap may be a foreign word to you)
-* String can be mutable
+
+- `String` is a heap allocated
+- String can be mutable
 
 <br />
 
 #### **&str**
-* this points to a sequence of utf-8 characters.  Its commonly called a slice.
+
+- this points to a sequence of utf-8 characters. Its commonly called a slice.
   Its a view into a `String`
-* its immutable
-* its analogous to `&[u8]`
-
-
-So if i say String, i mean `String` and if i say stir i mean `&str`
-(quick whiteboarding)
+- its immutable
+- its analogous to `&[u8]`
 
 <br />
 <br />
@@ -148,4 +150,3 @@ So if i say String, i mean `String` and if i say stir i mean `&str`
 <br />
 <br />
 <br />
-

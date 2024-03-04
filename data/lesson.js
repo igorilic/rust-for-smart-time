@@ -5,7 +5,7 @@ import { titleCase } from "title-case";
 import { marked } from "marked";
 import hljs from "highlight.js";
 
-const DEFAULT_ICON = "info-circle";
+const DEFAULT_ICON = "bars";
 const lessonsPath = path.join(process.cwd(), "lessons");
 
 function getTitle(slug, override) {
@@ -21,7 +21,7 @@ async function getMeta(section) {
   let meta = {};
   try {
     const file = await fs.readFile(
-      path.join(lessonsPath, section, "meta.json")
+      path.join(lessonsPath, section, "meta.json"),
     );
     meta = JSON.parse(file.toString());
   } catch (e) {
@@ -160,7 +160,7 @@ export async function getLesson(targetDir, targetFile) {
             const nextDirSlug = slugify(dir[i + 1]).slug;
             const nextLessonSlug = slugify(nextDir[0]).slug.replace(
               /\.md$/,
-              ""
+              "",
             );
             nextSlug = `${nextDirSlug}/${nextLessonSlug}`;
           } else {
@@ -180,7 +180,7 @@ export async function getLesson(targetDir, targetFile) {
             ).filter((str) => str.endsWith(".md"));
             const prevDirSlug = slugify(dir[i - 1]).slug;
             const prevLessonSlug = slugify(
-              prevDir[prevDir.length - 1]
+              prevDir[prevDir.length - 1],
             ).slug.replace(/\.md$/, "");
             prevSlug = `${prevDirSlug}/${prevLessonSlug}`;
           } else {

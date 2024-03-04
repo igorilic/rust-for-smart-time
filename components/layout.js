@@ -17,11 +17,6 @@ function Layout({ children }) {
           <div className="content-container">
             <div className="main">{children}</div>
           </div>
-          <Footer
-            twitter={courseInfo.social.twitter}
-            github={courseInfo.social.github}
-            twitch={courseInfo.social.twitch}
-          />
         </div>
       </HeaderProvider>
     </CourseInfoProvider>
